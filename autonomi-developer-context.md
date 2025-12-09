@@ -95,6 +95,7 @@ The network stores and understands four fundamental types. These are what the no
 - Key-addressed (address derived from a public key)
 - Can reference any native data type, including other pointers
 - Only the holder of the corresponding secret key can update it (signed)
+- Versioned (network keeps latest version)
 - Costs to create, updates are free.
 
 These allow you to create a stable address that can point to different data over time.
@@ -254,11 +255,11 @@ Future updates to the Autonomi Network may introduce additional payment methods 
 When you upload data, the payment flow works like this:
 
 1. **Quote request:** Your client asks nodes close to the data's target address for storage quotes
-2. **Price determination:** Nodes calculate their price based on their available storage capacity and current demand
+2. **Price determination:** Price is determined by an on-chain smart contract based on network storage capacity, available capacity versus demand, and proximity to network capacity limits
 3. **Selection and payment:** The client selects a node, sends the data along with the payment transfer
 4. **Verification and storage:** The receiving node verifies the payment, verifies the data, stores it, and it's then replicated to other close nodes
 
-Prices are dynamic - they depend on network capacity and demand at the time of upload. Sometimes the store cost changes between receiving a quote and uploading; in this case, the client pays the difference.
+Prices are dynamic - they depend on network capacity and demand at the time of upload. The client pays the price determined by the smart contract based on network conditions at the time of upload.
 
 All of this happens automatically when uploading via the CLI or an app.
 
@@ -270,12 +271,13 @@ All of this happens automatically when uploading via the CLI or an app.
 - Creating Pointers
 - Creating GraphEntries
 - Creating and expanding Vaults
-- Register updates (creates new GraphEntry)
+- Register creation and updates (creates new GraphEntry for each update)
 
 **Free operations:**
 - Retrieving data
 - Updating Scratchpads (after creation)
 - Updating Pointers (after creation)
+- Updating Vaults (after creation)
 ### Making Data Payments
 
 To make data payments, you need:
@@ -420,6 +422,7 @@ The primitives are flexible enough to support multiple integration patterns, eve
 For implementation details, API references, and current SDK documentation:
 
 - https://github.com/maidsafe/autonomi - Source code, README, latest changes
+- https://github.com/maidsafe/self_encryption - Self-encryption implementation
 - https://docs.autonomi.com/developers/ - Guides, concepts, getting started
 - https://docs.autonomi.com/developers/core-concepts/data-types - Detailed type documentation
 - https://docs.rs/autonomi/latest/autonomi/ - Complete Rust API

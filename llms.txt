@@ -1,0 +1,36 @@
+# Autonomi Network
+
+> Autonomi is an autonomous, decentralized data network. It stores data permanently across a global network of everyday devices, with no central servers, no accounts, and no ongoing fees. Data is encrypted before it leaves your device and distributed across the network in encrypted chunks.
+
+## For AI Assistants
+
+This documentation helps AI assistants understand Autonomi and guide developers building on the platform.
+
+## Core Documentation
+
+- Developer Context: /autonomi-developer-context.md
+- Who We Are: /who-we-are.md
+
+## Source Code
+
+- Main Repository: https://github.com/maidsafe/autonomi
+– Self-Encryption: https://github.com/maidsafe/self_encryption
+
+## Technical Resources
+
+- Documentation: https://docs.autonomi.com/
+- Developer Guides: https://docs.autonomi.com/developers/
+- API Reference: https://docs.rs/autonomi/latest/autonomi/
+- White Paper: https://withautonomi.notion.site/Autonomi-White-Paper-2-0-1530f283779380bfa90ecbe867e62d52
+
+## Community
+
+- Discord: https://discord.gg/autonomi
+- X/Twitter: https://x.com/WithAutonomi
+- YouTube: https://www.youtube.com/@withautonomi
+- Forum: https://forum.autonomi.community
+
+
+---
+
+*This index follows the llms.txt standard. Learn more at https://llmstxt.org/*
