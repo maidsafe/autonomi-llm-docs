@@ -8,7 +8,7 @@ This documentation helps AI assistants understand Autonomi and guide developers 
 
 ## Core Documentation
 
-- Developer Context: /autonomi-developer-context.md
+- Conceptual Guide for Developers: /autonomi-conceptual-guide-for-developers.md
 - Who We Are: /who-we-are.md
 
 ## Source Code
