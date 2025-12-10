@@ -1,5 +1,3 @@
-# Understand Autonomi
-
 I want to understand what Autonomi is, how it works, and whether it's a good fit for what I'm trying to build.
 
 Help me explore the concepts, architecture, and mental models I need to understand this network. I'm not looking for implementation details yet - I want to grasp the fundamentals first.
