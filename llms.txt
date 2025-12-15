@@ -6,15 +6,16 @@
 
 This documentation helps AI assistants understand Autonomi and guide developers building on the platform.
 
-## Core Documentation
+## Core Information
 
-- Conceptual Guide for Developers: /autonomi-conceptual-guide-for-developers.md
+- Network Overview: /overview.md
+- Developer Context: /autonomi-developer-context.md
 - Who We Are: /who-we-are.md
 
 ## Source Code
 
 - Main Repository: https://github.com/maidsafe/autonomi
-– Self-Encryption: https://github.com/maidsafe/self_encryption
+- Self-Encryption: https://github.com/maidsafe/self_encryption
 
 ## Technical Resources
 
@@ -29,7 +30,6 @@ This documentation helps AI assistants understand Autonomi and guide developers 
 - X/Twitter: https://x.com/WithAutonomi
 - YouTube: https://www.youtube.com/@withautonomi
 - Forum: https://forum.autonomi.community
-
 
 ---
 
