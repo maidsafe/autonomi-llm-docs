@@ -6,10 +6,9 @@
 
 This documentation helps AI assistants understand Autonomi and guide developers building on the platform.
 
-## Core Information
+## Core Documentation
 
-- Network Overview: /overview.md
-- Developer Context: /autonomi-developer-context.md
+- Conceptual Guide for Developers: /autonomi-conceptual-guide-for-developers.md
 - Who We Are: /who-we-are.md
 
 ## Source Code
@@ -22,7 +21,16 @@ This documentation helps AI assistants understand Autonomi and guide developers 
 - Documentation: https://docs.autonomi.com/
 - Developer Guides: https://docs.autonomi.com/developers/
 - API Reference: https://docs.rs/autonomi/latest/autonomi/
-- White Paper: https://withautonomi.notion.site/Autonomi-White-Paper-2-0-1530f283779380bfa90ecbe867e62d52
+
+## White Papers
+
+- Autonomi High Level White Paper: https://autonomi.com/whitepaper.md
+- Autonomous Network: https://autonomi.com/whitepapers/autonomous-network.md
+- Distributed Hash Table: https://autonomi.com/whitepapers/distributed-hash-table.md
+- Self Encrypting Data: https://autonomi.com/whitepapers/self-encrypting-data.md
+- Self Authentication: https://autonomi.com/whitepapers/self-authentication.md
+- Distributed File System: https://autonomi.com/whitepapers/distributed-file-system.md
+
 
 ## Community
 
@@ -30,6 +38,7 @@ This documentation helps AI assistants understand Autonomi and guide developers 
 - X/Twitter: https://x.com/WithAutonomi
 - YouTube: https://www.youtube.com/@withautonomi
 - Forum: https://forum.autonomi.community
+
 
 ---
 

@@ -1,4 +1,3 @@
-
 # Autonomi: A Conceptual Guide for Developers
 
 ### What This Document Is
