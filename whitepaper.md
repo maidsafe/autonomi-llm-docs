@@ -1,16 +1,17 @@
-# Autonomi White Paper (2.0)
+# Autonomi White Paper (2.5)
 
-**UPDATED AND RELEASED: 05 DECEMBER 2024**
+**UPDATED AND RE-RELEASED: 19 FEBRUARY 2026**
 
 ---
 
 ### Disclaimer:
- 
+
 #### Not an Investment Prospectus or Financial Advice
 
 Please be advised that the information provided in this publication is intended solely for informational purposes and does not constitute an investment prospectus, financial advice, or any form of legally binding contractual agreement between you, the network that will be known as 'Autonomi' or any associated the team, company and/or foundation connected to the network. For avoidance of doubt this includes the SAFE Network and the SAFE (Network) Foundation, which will become known as 'Autonomi' and 'Autonomi Foundation'. respectively.
- 
+
 This publication is not intended to offer, solicit, or recommend the buying, selling, or holding of tokens or any other financial instruments.
+
 #### No Forward-Looking Statements
 
 This publication does not include any "forward-looking statements" as defined by applicable securities laws. Any statements about future events, scenarios, or otherwise speculative information are given for illustrative purposes and should not be interpreted as alluding to nor providing any guarantee of future performance or outcome. You should not place undue reliance on statements or including, but not limited to, current views and plans of 'The Network' as of the date of publication.
@@ -22,14 +23,6 @@ Purchasing cryptocurrencies or other tokens involves a high level of risk and sh
 #### Regulatory Compliance
 
 A network token sale may be subject to local laws and regulations. It is your responsibility to determine the legal standing of those tokens in your jurisdiction and for you to comply with all relevant laws and regulations prior to making an investment. By accessing or using this publication, you acknowledge and agree to the terms set forth in this disclaimer and assume full responsibility for any and all associated risks. The Foundation and any associated network partners disclaim all liability for any loss or damage of any kind that may arise directly or indirectly from the use of, or reliance on, any information contained in this publication.
-
----
-
-# Why 2.0 - What has changed?
-
-**There have been some additions/updates made to this paper that relate to the launch of Autonomi and its early years, these are specifically connected to the rewards (incentives) that are earned (and used) by those supporting/using The Network. The fundamentals of The Network remain unchanged.**
-
-For ease of navigation, and to enable accurate tracking of all V2 updates, all non highlight text in black/grey, is original (taken directly from [White Paper 1.0](https://www.notion.so/Autonomi-White-Paper-1-0-15f226e8508940faa16d2df84119e150?pvs=21)), all **text highlighted in blue is new content**, i.e. updated sections and information. Please note: new charts are only signposted via a blue highlighted heading/title and while some new mathematical formulas are on a plain background they are all 'topped and tailed' with highlighted (blue) text.
 
 ---
 
@@ -162,6 +155,46 @@ Every company is a data company, yet few have access to the high quality data, l
 With Autonomi, an application, no matter its nature, never has to ask for user's information, and never has to consider ongoing storage costs. So while users can access the functionality they know and new experiences they like, they can do so, without ever having to compromise their ownership or rights over their personal data.
 
 Our shared ability to take back control of the internet is largely dependent on our ability to innovate and influence. The quality of experience given to us, and the information available to us, that is also knowingly and willing (with clear benefits) shared by us, is critical to this - the Autonomi Network makes this and more possible.
+
+---
+
+# Autonomi 2.0: What Has Evolved
+
+Autonomi 2.0 is not an iteration. It is a fundamental evolution of the original network design - deployed across every layer of the stack to prepare the network for a world in which agents, not just humans, are the primary users.
+
+The architecture has been restructured into distinct, separated layers: transport, DHT, trust, identity independently reinforcing each other.
+
+## Post-Quantum Security - The Full Picture
+
+> Autonomi 2.0 will be the world's first quantum-proof decentralised network.
+
+ML-DSA-65 handles digital signatures. ML-KEM-768 handles key exchange. These are NIST-standardised post-quantum algorithms, not experimental proposals.
+
+To be precise about what this means in context of 1.0: in Autonomi 1.0, stored data chunks were content-addressed and self-encrypted — providing practical resistance against brute-force decryption. However, authentication, key exchange, and node-to-node trust relied on classical cryptography that is vulnerable to quantum attack. 2.0 closes that gap entirely.
+
+## 1.0 vs 2.0: Side by Side
+
+|Dimension|Autonomi 1.0|Autonomi 2.0|
+|---|---|---|
+|Cryptography|Classical encryption. Note: stored data chunks were content-addressed and self-encrypted — providing practical resistance against brute-force decryption|Post-quantum throughout: ML-DSA-65 (signatures) + ML-KEM-768 (key exchange). NIST-standardised. No classical fallback required|
+|Architecture|Coupled layers|Fully separated: transport, DHT, trust, identity independently reinforcing each other|
+|Node operation|Router-dependent; STUN/ICE required. Standard consumer routers frequently interfered, limiting who could reliably run a node|Native QUIC NAT traversal — works from any home connection, no configuration required|
+|Data distribution|Basic distribution|Geographic diversity enforcement — data distributed across regions, not concentrated in singular locations|
+|Node integrity|No verification|Software attestation at network level (*not in initial release, will follow after)|
+|Sybil resistance|Basic|Multi-layer: Sybil resistance + eclipse protection + EigenTrust reputation scoring|
+|DHT|IPv4 only|Dual-stack IPv4 + IPv6 with separate close groups|
+|Transport|Fixed (internet only)|Adaptive — internet, Bluetooth, LoRa. Communication and persistence continue even when infrastructure is disrupted|
+|Trust layer|None|Network-level trust layer with software attestation|
+|Agent infrastructure|None|x0x agent-to-agent gossip network for skill sharing and agent discovery; Trusted Data Layer for verified provenance|
+|Human interface|CLI and Launchpad|Indelible 2.0 (Merkle Tree batch uploads); Fae (local AI agent — Autonomi integration entirely invisible to the user)|
+
+**Node Operation**
+
+Running a node from home will now work seamlessly. In 1.0, standard consumer-grade routers frequently interfered with connectivity, requiring STUN/ICE workarounds that limited who could reliably participate. 2.0 uses native QUIC NAT traversal — no configuration required.
+
+**Adaptive Transport**
+
+Autonomi 2.0 adds adaptive transport: The Network can route over alternative paths including Bluetooth and LoRa, allowing communication and data persistence to continue even when traditional internet infrastructure is disrupted.
 
 ---
 
@@ -321,15 +354,11 @@ Note: if the Network Node Reserve amount hits 10% of the Max Supply of network t
 
 ### Key Properties of the Token Network
 
-The token for Autonomi serves as the incentive for node operators to join The Network and cooperate toward the goal of providing secure data storage. Conceptually this is similar to that of Bitcoin: _to ensure that cooperative participation is a more rational course of action than uncooperative or malicious activity_.
-
-Tokens can also be transferred directly between users and used as a means to pay third parties for goods and services. There is no charge for downloading data, but uploaders must pay a one-time fee to pay for storage.
+The token for Autonomi serves as the incentive for node operators to join The Network and cooperate toward the goal of providing secure data storage. Conceptually this is similar to that of Bitcoin: _to ensure that cooperative participation is a more rational course of action than uncooperative or malicious activity_. Tokens can also be transferred directly between users and used as a means to pay third parties for goods and services. There is no charge for downloading data, but uploaders must pay a one-time fee to pay for storage.
 
 Below are some of the key properties of the Autonomi token:
 
-> **Maximum Supply**
-> 
-> There will be a total Maximum Supply of 1,200,000,000 (1.2 Billion) tokens created over The Network's lifetime. This has been reduced from a Maximum Supply of 4,294,967,296 (4.29 Billion) tokens. The reason for this decrease is derived from two factors:
+> **Maximum Supply** There will be a total Maximum Supply of 1,200,000,000 (1.2 Billion) tokens created over The Network's lifetime. This has been reduced from a Maximum Supply of 4,294,967,296 (4.29 Billion) tokens. The reason for this decrease is derived from two factors:
 > 
 > 1. A more limited emissions schedule, with the same now only applying to support the early phase of The Network
 > 2. Decrease in number of tokens held by The Autonomi Foundation (emitted over time via Smart Contract release)
@@ -369,9 +398,17 @@ MaidSafeCoin (also known and referred to as 'OMNI MAID') was the origin token of
 
 This allocation represents 38% of the Maximum Supply, an increase of 8% from 1.0 of the White Paper.
 
-### Emissions Allocation
+### Emissions Allocation: Pool Status (Updated V2.5)
 
-In the early years of The Network especially there is need and therefore an allocation for emissions - governed by a smart contract. Based on community feedback this pool has been reduced to 240,000,000 tokens (20% of Max Supply), which will be emitted over a 12 year period. This is a change from 3,167,866,884 tokens, representing 70% of the Maximum Supply, which was to be emitted (at a diminishing rate) over a period of 30 years. Please see 'Storing Data and Scaling Storage' to read more why it's felt that emissions are a critical part of supporting growth in the early years.
+The ANT token launched in February 2025 with a total supply of 1,200,000,000 tokens. Of that, 240,000,000 tokens (20% of Max Supply) were allocated to an emissions pool governed by smart contract, originally intended to incentivise node operators over a 12-year period.
+
+Node emissions were paused in January 2026. To date, just 2.94% of that emissions pool has been used — approximately 7,056,000 tokens. The remaining 97.06% (~232,944,000 tokens) remains unissued.
+
+The reasoning is straightforward. Agents don't work the way humans do when it comes to financial transactions. Traditional crypto incentive models — designed around speculative early adopters manually running nodes — do not map to how autonomous agents will evaluate and adopt infrastructure. Emissions designed to attract human participants are unlikely to be the mechanism that drives agent adoption.
+
+Agents will encounter Autonomi through the 2.0 storage skill available on x0x, through the Trusted Data Layer, and through integrations surfaced by Fae. Agents adopt skills and behaviours based on reason and logic, the value proposition of a capability, and the verifiability of data — not on yield farming incentives or token reward schedules.
+
+In summary, the remaining emissions pool represents significant potential for future ecosystem utilisation, the Foundation will publicly communicate any changes to the emissions pool status or strategy as they are made.
 
 ### Autonomi Foundation
 
@@ -390,15 +427,17 @@ The Autonomi Foundation will receive payments via a Smart Contract with allocate
 
 ### MaidSafe Shareholders
 
-Shareholders have been allocated 214,748,365 tokens which will be distributed after the TGE.
+Shareholders were allocated 214,748,365 tokens by The Network, these are now available for claiming by shareholders (note: a 'wallet' will be required to take custody of tokens).
 
 ---
 
 # The Difference with Autonomi
 
-While there are a multitude of decentralized networks and protocols in use, many can only be considered partially autonomous; have limitations to large-scale use; require compromises on security or data persistence; or have large barriers to entry and cost burdens.
+Autonomi is a peer-to-peer network that seeks to use everyday devices - computers, home servers, personal devices - to provide secure, permanent data storage. No centralised infrastructure. No ongoing fees. No intermediaries.
 
-Autonomi is designed from the ground up to address these issues and provide all the necessary ingredients required to meet the ambitions and promise of a truly decentralised and autonomous network.
+A person pays once to store their data and it persists. The Network self-encrypts, self-distributes, and self-heals — without any single entity controlling who can store, access, or delete information.
+
+Autonomi is structurally different from every alternative. Filecoin, Arweave, and Storj operate on capital-intensive infrastructure models. ICP runs on dedicated data centres. BitTorrent provides file-sharing without persistence guarantees. AWS is centralised by design. Autonomi is the only network that combines permanent storage, zero ongoing cost, commodity hardware participation, and blockchain-less data handling into a single architecture.
 
 |**Network**|**Autonomi**|**FileCoin**|**Storj**|**Arweave**|**Swarm**|**ICP**|**HoloChain**|**BitTorrent**|**AWS**|
 |---|---|---|---|---|---|---|---|---|---|
@@ -420,7 +459,7 @@ Autonomi is designed from the ground up to address these issues and provide all 
 |Nano Payments*|✅|-|-|-|-|✅|Micro|-|-|
 |Highly Parallelizable|✅|-|-|-|-|✅|✅|-|-|
 
-* When Autonomi's Native Token is in use
+- When Autonomi's Native Token is in use
 
 ** For Private Data on Arweave: While private or encrypted data can technically be stored, the platform's design makes it best suited for public data due to its permanence.
 
@@ -609,8 +648,6 @@ https://autonomi.com/ - Autonomi Website
 [Self Authentication](https://autonomi.com/whitepapers/self-authentication.md) — David Irvine, 2010
 
 [MaidSafe Github](https://github.com/maidsafe) — https://github.com/maidsafe
-
-[Autonomi Network Tokens (ANT) Arbiscan](https://arbiscan.io/token/0xa78d8321b20c4ef90ecd72f2588aa985a4bdb684?a=0xdb273132f244ed6877fb52ca450dac39eb795976)
 
 [MaidSafeCoin Omniexplorer](https://omniexplorer.info/asset/3) — https://omniexplorer.info/asset/3
 

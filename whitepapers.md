@@ -11,4 +11,4 @@ The original technical papers authored by David Irvine, laying out the foundatio
 
 The Autonomi White Paper covers the high level workings of the Network and it’s stack. This latest update adds more detail on the rewards, incentives, and tokenomic structures that will power it’s internal economy.
 
-[The Autonomi White Paper v2.0](https://autonomi.com/whitepaper.md)
+[The Autonomi White Paper v2.5](https://autonomi.com/whitepaper.md)
