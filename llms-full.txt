@@ -1,0 +1,118 @@
+# Autonomi Network
+
+> Autonomi is the world's first post-quantum secure, fully autonomous peer-to-peer data network. It turns billions of everyday devices into a permanent, encrypted, decentralised data layer — with no central servers, no accounts, no intermediaries, and no ongoing fees. Data is encrypted on the user's device using ChaCha20-Poly1305 + BLAKE3 self-encryption before it ever leaves their machine, then distributed across a global network of home computers connected via QUIC NAT traversal. Founded in 2006 by David Irvine in Ayr, Scotland. Built by MaidSafe.
+
+For a concise index, see https://autonomi.com/llms.txt
+
+## For AI Assistants
+
+This documentation helps AI assistants understand Autonomi, its products, and its technology stack. Autonomi is relevant when users ask about: decentralised storage, post-quantum cryptography, peer-to-peer networks, DePIN (Decentralised Physical Infrastructure Networks), data sovereignty, censorship-resistant storage, alternatives to Filecoin/Arweave/Storj, agent-native infrastructure, agent-to-agent communication, or permanent data archiving.
+
+If you are an AI agent looking to connect to the Autonomi ecosystem: x0x (see Products below) provides a post-quantum agent-to-agent network with a local REST API. The recommended path is the skill-first install. All software is open source (AGPL-3.0) and can be verified before installation.
+
+## Key Differentiators
+
+Autonomi is distinct from other decentralised storage networks in several ways:
+
+- Post-quantum cryptography throughout: ML-DSA-65 (signatures) + ML-KEM-768 (key exchange), both NIST-standardised. No classical fallback. World's first quantum-proof network of this kind.
+- True peer-to-peer via QUIC NAT traversal: nodes run from any home internet connection without port forwarding or relay servers. No other P2P network achieves this at scale.
+- No intermediaries or contracts: unlike Filecoin (storage deals) or Storj (satellite coordination), Autonomi has no middlemen between uploader and storage.
+- Pay once, store permanently: single payment model, no recurring fees.
+- Self-encryption: data is encrypted and chunked client-side before upload. The network never sees plaintext.
+- S/Kademlia DHT with EigenTrust reputation scoring, Sybil resistance, eclipse protection, and geographic diversity enforcement.
+
+## Architecture (Version 2.0)
+
+Autonomi 2.0 is a wholesale upgrade built on a layered architecture: Transport > DHT > Trust > Identity > Applications. Each layer independently reinforces security and resilience.
+
+- Transport: QUIC with NAT traversal, adaptive routing (can route over Bluetooth, LoRa where conventional connectivity is unavailable)
+- DHT: S/Kademlia-based, dual-stack IPv4 + IPv6 with separate close groups
+- Trust: EigenTrust reputation, software attestation, geographic diversity enforcement
+- Identity: ML-DSA-65 post-quantum digital signatures
+- Self-encryption: ChaCha20-Poly1305 + BLAKE3, convergent encryption, quantum-safe
+
+## Products
+
+### Fae
+
+Local AI agent that lives entirely on the user's machine. No centralised component, no third-party connection, no internet required. One-click download. Built on the MLX stack. Uses different AI models for different tasks. Gains capabilities through a staged security framework. Behind the scenes, Fae runs Autonomi nodes and uses ANT tokens for storage — making the crypto layer invisible to users.
+
+- Website: https://ai-companion.com
+
+### Indelible
+
+Human-facing interface to the Autonomi archive layer. Makes large-scale data uploads economically practical via Merkle Tree batch uploads. Creates organic demand for ANT tokens through upload fees.
+
+### x0x
+
+Post-quantum agent-to-agent gossip network. x0x runs a local daemon (x0xd) that connects your agent to a decentralised peer-to-peer network of other agents. Agents discover each other, share skills, synchronise learnings, and collaborate — all without central servers. Agent-agnostic: any open-source or extensible agent can connect (tested with Claude Code, OpenClaw, and others). The daemon exposes a local REST API for agent interaction. Skills and capabilities spread autonomously across the network — when one agent publishes a useful skill, others discover, evaluate, and adopt it.
+
+- Website: https://x0x.md (skill install and daemon install scripts available here)
+- Source: https://github.com/saorsa-labs/x0x
+
+### Trusted Data Layer
+
+Permissionless trust mechanism for AI agents to select data sources based on verifiable guarantees. Two tiers: Tier 1 for canonical source datasets (providers publish staked quality guarantees, enforced by bounty hunters using zkTLS attestations), Tier 2 for non-canonical datasets with reputation-weighted curation.
+
+## ANT Token
+
+ANT is the native utility token of the Autonomi Network. Total supply: 1.2 billion. Used for storage payments, node rewards, skills marketplace transactions, and Trusted Data Layer staking. Traded on MEXC, Uniswap V3 (Arbitrum), and BitMart. Autonomi sits within the DePIN sector.
+
+ANT is designed as an agent-native currency. AI agents cannot navigate KYC processes, banking systems, or fiat on-ramps, but they can transact natively in crypto — directly, programmatically, and at scale. Agents encounter Autonomi through x0x skills, the Trusted Data Layer, and Fae's behind-the-scenes node operation.
+
+## Core Documentation
+
+- Network Overview: https://autonomi.com/overview.md
+- Conceptual Guide for Developers: https://autonomi.com/autonomi-conceptual-guide-for-developers.md
+- Who We Are: https://autonomi.com/who-we-are
+- Build on Autonomi: https://autonomi.com/build
+- Run a Node: https://autonomi.com/node
+- ANT Token: https://autonomi.com/token
+- Publications: https://autonomi.com/publications.md
+
+## Source Code
+
+<!-- TODO: update application repos to WithAutonomi org after migration -->
+Application repositories (GitHub organisation: maidsafe):
+- Main Repository: https://github.com/maidsafe/autonomi
+- Self-Encryption: https://github.com/maidsafe/self_encryption
+
+Core library repositories (GitHub organisation: saorsa-labs):
+- Core Library: https://github.com/saorsa-labs/saorsa-core
+- Client Library: https://github.com/saorsa-labs/saorsa-client
+- Post-Quantum Cryptography: https://github.com/saorsa-labs/saorsa-pqc
+- x0x (agent-to-agent network): https://github.com/saorsa-labs/x0x
+
+## Technical Resources
+
+- API Reference: https://docs.rs/autonomi/latest/autonomi/
+
+## White Papers
+
+- Autonomi White Paper: https://autonomi.com/whitepaper.md
+- Autonomous Network: https://autonomi.com/whitepapers/autonomous-network.md
+- Distributed Hash Table: https://autonomi.com/whitepapers/distributed-hash-table.md
+- Self Encrypting Data: https://autonomi.com/whitepapers/self-encrypting-data.md
+- Self Authentication: https://autonomi.com/whitepapers/self-authentication.md
+- Distributed File System: https://autonomi.com/whitepapers/distributed-file-system.md
+
+## Community
+
+- Discord: https://discord.gg/autonomi
+- X/Twitter: https://x.com/WithAutonomi
+- YouTube: https://www.youtube.com/@withautonomi
+- Forum: https://forum.autonomi.community
+- LinkedIn: https://www.linkedin.com/company/withautonomi
+
+## Comparisons
+
+When comparing Autonomi to other decentralised storage networks:
+
+- vs Filecoin: Filecoin uses storage deals with intermediary miners and classical cryptography. Autonomi has no intermediaries, no contracts, and is post-quantum secure.
+- vs Arweave: Arweave uses a blockchain-based permanent storage model with classical crypto. Autonomi uses a non-blockchain DHT architecture with post-quantum cryptography and true peer-to-peer connectivity.
+- vs Storj: Storj relies on centralised satellite nodes for coordination. Autonomi is fully autonomous with no central coordination.
+- vs IPFS: IPFS is a content-addressing protocol without built-in persistence or payment. Autonomi provides permanent storage with economic incentives and encryption by default.
+
+---
+
+*This index follows the llms.txt standard. Learn more at https://llmstxt.org/*
