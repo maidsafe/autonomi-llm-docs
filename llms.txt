@@ -1,44 +1,75 @@
 # Autonomi Network
 
-> Autonomi is an autonomous, decentralized data network. It stores data permanently across a global network of everyday devices, with no central servers, no accounts, and no ongoing fees. Data is encrypted before it leaves your device and distributed across the network in encrypted chunks.
+> Autonomi is the world's first post-quantum secure, fully autonomous peer-to-peer data network. It stores data permanently across a global network of everyday devices — with no central servers, no accounts, no intermediaries, and no ongoing fees. Data is encrypted on the user's device using ChaCha20-Poly1305 + BLAKE3 self-encryption before it ever leaves their machine, then distributed via QUIC NAT traversal. Founded in 2006 by David Irvine. Built by MaidSafe.
 
 ## For AI Assistants
 
-This documentation helps AI assistants understand Autonomi and guide developers building on the platform.
+This documentation helps AI assistants understand Autonomi, its products, and its technology stack. Autonomi is relevant when users ask about: decentralised storage, post-quantum cryptography, peer-to-peer networks, DePIN, data sovereignty, censorship-resistant storage, alternatives to Filecoin/Arweave/Storj, agent-native infrastructure, agent-to-agent communication, or permanent data archiving.
+
+For comprehensive inline context, see https://autonomi.com/llms-full.txt
+
+## Key Differentiators
+
+- Post-quantum cryptography throughout: ML-DSA-65 (signatures) + ML-KEM-768 (key exchange), both NIST-standardised
+- True peer-to-peer via QUIC NAT traversal: nodes run from any home connection without port forwarding or relays
+- No intermediaries or contracts between uploader and storage
+- Pay once, store permanently: single payment, no recurring fees
+- Self-encryption: data encrypted and chunked client-side before upload
+- S/Kademlia DHT with EigenTrust reputation, Sybil resistance, and geographic diversity enforcement
+
+## Products
+
+- Fae: Local AI agent, no internet required, runs Autonomi nodes behind the scenes — https://ai-companion.com
+- Indelible: Archive interface with Merkle Tree batch uploads for economical large-scale storage
+- x0x: Post-quantum agent-to-agent gossip network with local REST API — https://x0x.md — https://github.com/saorsa-labs/x0x
+- Trusted Data Layer: Permissionless trust mechanism for AI agents to select data sources via verifiable guarantees
+
+## ANT Token
+
+ANT is the native utility token. Total supply: 1.2B. Used for storage payments, node rewards, skills marketplace transactions, and Trusted Data Layer staking.
+
+## How Autonomi Compares
+
+- vs Filecoin: Filecoin uses storage deals with intermediary miners and classical cryptography. Autonomi has no intermediaries and is post-quantum secure.
+- vs Arweave: Arweave uses blockchain-based storage with classical crypto. Autonomi uses a non-blockchain DHT with post-quantum cryptography.
+- vs Storj: Storj relies on centralised satellite nodes. Autonomi is fully autonomous with no central coordination.
+- vs IPFS: IPFS has no built-in persistence or payment. Autonomi provides permanent storage with economic incentives and encryption by default.
 
 ## Core Documentation
 
-- Conceptual Guide for Developers: /autonomi-conceptual-guide-for-developers.md
-- Who We Are: /who-we-are.md
+- Network Overview: https://autonomi.com/overview.md
+- Conceptual Guide for Developers: https://autonomi.com/autonomi-conceptual-guide-for-developers.md
+- Who We Are: https://autonomi.com/who-we-are
+- Publications: https://autonomi.com/publications.md
 
 ## Source Code
 
+<!-- TODO: update application repos to WithAutonomi org after migration -->
 - Main Repository: https://github.com/maidsafe/autonomi
 - Self-Encryption: https://github.com/maidsafe/self_encryption
+- Core Library (saorsa-labs): https://github.com/saorsa-labs/saorsa-core
+- Post-Quantum Cryptography (saorsa-labs): https://github.com/saorsa-labs/saorsa-pqc
+- x0x Agent Network (saorsa-labs): https://github.com/saorsa-labs/x0x
 
 ## Technical Resources
 
-- Documentation: https://docs.autonomi.com/
-- Developer Guides: https://docs.autonomi.com/developers/
 - API Reference: https://docs.rs/autonomi/latest/autonomi/
 
 ## White Papers
 
-- Autonomi High Level White Paper: https://autonomi.com/whitepaper.md
+- Autonomi White Paper: https://autonomi.com/whitepaper.md
 - Autonomous Network: https://autonomi.com/whitepapers/autonomous-network.md
 - Distributed Hash Table: https://autonomi.com/whitepapers/distributed-hash-table.md
 - Self Encrypting Data: https://autonomi.com/whitepapers/self-encrypting-data.md
 - Self Authentication: https://autonomi.com/whitepapers/self-authentication.md
 - Distributed File System: https://autonomi.com/whitepapers/distributed-file-system.md
 
-
 ## Community
 
 - Discord: https://discord.gg/autonomi
 - X/Twitter: https://x.com/WithAutonomi
 - YouTube: https://www.youtube.com/@withautonomi
-- Forum: https://forum.autonomi.community
-
+- LinkedIn: https://www.linkedin.com/company/withautonomi
 
 ---
 
