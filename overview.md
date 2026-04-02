@@ -142,15 +142,20 @@ Use Autonomi as an encrypted storage backend instead of centralised providers. H
 
 ## Source Code
 
-<!-- TODO: update application repos to WithAutonomi org after migration -->
-Application repositories (GitHub organisation: maidsafe):
-- [Main Repository](https://github.com/maidsafe/autonomi)
-- [Self-Encryption](https://github.com/maidsafe/self_encryption)
+Application and product repositories (GitHub organisation: WithAutonomi):
+- [Developer SDK](https://github.com/WithAutonomi/ant-sdk)
+- [Client CLI and Library](https://github.com/WithAutonomi/ant-client)
+- [Node Implementation](https://github.com/WithAutonomi/ant-node)
+- [Self-Encryption](https://github.com/WithAutonomi/self_encryption)
+- [Indelible](https://github.com/WithAutonomi/indelible)
+- [ant-ui](https://github.com/WithAutonomi/ant-ui)
+- [evmlib](https://github.com/WithAutonomi/evmlib)
 
-Core library repositories (GitHub organisation: saorsa-labs):
+Foundational repositories (GitHub organisation: saorsa-labs):
 - [Core Library](https://github.com/saorsa-labs/saorsa-core)
-- [Client Library](https://github.com/saorsa-labs/saorsa-client)
 - [Post-Quantum Cryptography](https://github.com/saorsa-labs/saorsa-pqc)
+- [Transport](https://github.com/saorsa-labs/saorsa-transport)
+- [Gossip](https://github.com/saorsa-labs/saorsa-gossip)
 - [x0x Agent Network](https://github.com/saorsa-labs/x0x)
 
 ---

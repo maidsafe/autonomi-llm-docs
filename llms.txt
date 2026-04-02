@@ -45,11 +45,17 @@ ANT is the native utility token. Total supply: 1.2B. Used for storage payments, 
 
 ## Source Code
 
-<!-- TODO: update application repos to WithAutonomi org after migration -->
-- Main Repository: https://github.com/maidsafe/autonomi
-- Self-Encryption: https://github.com/maidsafe/self_encryption
+- Developer SDK: https://github.com/WithAutonomi/ant-sdk
+- Client CLI and Library: https://github.com/WithAutonomi/ant-client
+- Node Implementation: https://github.com/WithAutonomi/ant-node
+- Self-Encryption: https://github.com/WithAutonomi/self_encryption
+- Indelible: https://github.com/WithAutonomi/indelible
+- ant-ui: https://github.com/WithAutonomi/ant-ui
+- evmlib: https://github.com/WithAutonomi/evmlib
 - Core Library (saorsa-labs): https://github.com/saorsa-labs/saorsa-core
 - Post-Quantum Cryptography (saorsa-labs): https://github.com/saorsa-labs/saorsa-pqc
+- Transport (saorsa-labs): https://github.com/saorsa-labs/saorsa-transport
+- Gossip (saorsa-labs): https://github.com/saorsa-labs/saorsa-gossip
 - x0x Agent Network (saorsa-labs): https://github.com/saorsa-labs/x0x
 
 ## Technical Resources
