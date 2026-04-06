@@ -290,7 +290,7 @@ x0xd --name bob
 - https://github.com/saorsa-labs/x0x/blob/main/SKILL.md — the x0x skill to give to your agent
 - https://github.com/saorsa-labs/x0x — Core repo, CLI, daemon, REST/WebSocket API, primers
 - https://github.com/saorsa-labs/communitas — Native apps (Swift, Dioxus) and HTML GUI
-- https://github.com/saorsa-labs/ant-quic — Shared QUIC transport with NAT traversal
+- https://github.com/saorsa-labs/saorsa-transport — Shared transport abstraction for connectivity and NAT traversal
 - https://github.com/saorsa-labs/saorsa-gossip — HyParView + PlumTree + presence + FOAF gossip implementation
 - https://x0x.md — Website and install script
 
