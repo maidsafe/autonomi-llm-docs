@@ -7,7 +7,7 @@ Help me explore novel applications that leverage Autonomi's unique properties:
 - Content addressing (data self-verifies, enables novel discovery patterns)
 - Self-encryption (privacy by default, no trust required)
 - No accounts (cryptographic ownership, no central authority)
-- Immutability + mutability (permanent content with mutable references)
+- Immutability + application-managed history (permanent content, with updates handled explicitly above the storage layer)
 - Unlimited derived keys (hierarchical access control from one master key)
 - True digital permanence (data persists independent of any organization)
 
@@ -34,4 +34,3 @@ Then help me explore how Autonomi's primitives could enable solutions I haven't 
 Below is a comprehensive conceptual guide to help you understand Autonomi's architecture, primitives, and mental models. Use this to inform your responses about how to build on Autonomi.
 
 ---
-
