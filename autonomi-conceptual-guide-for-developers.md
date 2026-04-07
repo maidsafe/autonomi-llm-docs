@@ -197,11 +197,11 @@ This is fundamentally different from traditional services where you pay recurrin
 
 ### How Pricing Works
 
-Storage pricing is deterministic and self-regulating. Each node prices its storage based on how full it is, using a quadratic function:
+Storage pricing is deterministic and self-regulating. Each node prices its storage based on how many records it currently stores, using a calibrated quadratic curve:
 
-**Price = (record_count / 6000)^2 ANT per chunk**
+**price_per_chunk_ANT(record_count) = 0.00390625 + 0.03515625 * (record_count / 6000)^2**
 
-Where `record_count` is the number of records currently stored by that node. Prices rise slowly when nodes are empty and accelerate sharply as they fill up. No external oracles, no governance votes, no market-making mechanisms - the price emerges from network state.
+Where `record_count` is the number of records currently stored by that node. The non-zero baseline provides a bootstrap-phase spam barrier even when nodes are empty, and the quadratic term makes storage progressively more expensive as nodes fill up. No external oracles, no governance votes, no market-making mechanisms - the price emerges from network state.
 
 Prices are verified through neighbourhood record count maintenance: nodes in a close group track what their neighbours hold and can detect inconsistent pricing claims.
 
@@ -209,7 +209,7 @@ Prices are verified through neighbourhood record count maintenance: nodes in a c
 
 The network uses Autonomi Network Tokens (`ANT`, or sometimes shown as `$AUTONOMI` on some centralised exchanges) - an ERC-20 token on the Arbitrum One network (an Ethereum Layer 2). Nodes are compensated for storing, maintaining, and serving data in ANT.
 
-ANT has a fixed total supply of 1.2 billion tokens. Every storage payment burns 1% of the ANT spent, creating deflationary pressure proportional to network usage.
+ANT has a fixed total supply of 1.2 billion tokens.
 
 ### How Payments Work In Practice
 
@@ -217,7 +217,7 @@ When you upload data, the flow is:
 
 1. **Quote request:** Your client asks nodes close to the data's target address for storage quotes
 2. **Price determination:** Each node's price is determined by its record count - the quadratic pricing function applied locally
-3. **Payment:** The client pays the node responsible for storing that chunk. A 3x multiplier is applied to cover redundancy costs across the close group. 1% of every payment is burned.
+3. **Payment:** The client pays the node responsible for storing that chunk. A 3x multiplier is applied to cover redundancy costs across the close group.
 4. **Verification and storage:** The receiving node verifies the payment, verifies the data, stores it, and it's then replicated to other close nodes
 
 For large uploads, Merkle Tree batch payments reduce on-chain cost from `O(n)` per chunk to `O(1)` per batch - a single Merkle root submission on-chain covers an entire batch of chunks. This is what makes large-scale archiving economically practical.
@@ -238,7 +238,7 @@ Regardless of pattern, payments require ANT tokens on Arbitrum One plus a small 
 
 ### The Permanent Storage Model
 
-Autonomi's permanent storage works like a membership model: you pay once to join (upload data), and your data persists because future members (future uploaders) fund the ongoing costs. As long as new data keeps being uploaded, the economics sustain storage of historical data. The 1% burn means even moderate ongoing usage creates enough economic activity to sustain the network.
+Autonomi's permanent storage works like a membership model: you pay once to join (upload data), and your data persists because future members (future uploaders) fund the ongoing costs. As long as new data keeps being uploaded, the economics sustain storage of historical data.
 
 ---
 

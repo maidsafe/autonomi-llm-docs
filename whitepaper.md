@@ -350,7 +350,7 @@ While the rates of data upload and raw resource price decline can appear perfect
 
 The 'Network Node Reserve' is designed to safeguard The Network against such circumstances. The reserve will be funded by a portion of the data upload payments and will only ever be used (via smart contract) to incentivize node operators if and when the data upload rate falls below the average upload rate - causing a risk of capacity volatility or disruption on the network. Should such an event occur then the 'Network Node Reserve' will release tokens in order to provide ongoing incentives for network nodes to stay online.
 
-Note: if the Network Node Reserve amount hits 10% of the Max Supply of network tokens, then any further payments to the Node Network Reserve will be set at 2% of data upload payments and will be immediately burned (leading to a decrease in maximum token supply).
+Note: the Network Node Reserve is capped at 10% of the Max Supply of network tokens.
 
 ### Key Properties of the Token Network
 
@@ -589,7 +589,7 @@ A machine that connects with others using the Autonomi Protocol to form the Netw
 
 ### Node Network Reserve
 
-18% of data payments (up to 10% of maximum supply) are sent to this allocation for node operators. This allocation will be used to support payments to nodes should the network upload values experience volatility. If the Node Network Reserve holds 10% of the network's Maximum Supply of tokens, 18% payment reduces to 2%, with the 2% payment burned (removed from Maximum Supply).
+18% of data payments (up to 10% of maximum supply) are sent to this allocation for node operators. This allocation will be used to support payments to nodes should the network upload values experience volatility.
 
 ### Register
 
