@@ -40,18 +40,25 @@ ANT is the native utility token. Total supply: 1.2B. Used for storage payments, 
 - Network Overview: https://autonomi.com/overview.md
 - Conceptual Guide for Developers: https://autonomi.com/autonomi-conceptual-guide-for-developers.md
 - x0x Conceptual Guide for Humans: https://autonomi.com/x0x-a-conceptual-guide-for-humans.md
+- Learn More: https://docs.autonomi.com/learn
+- Developer Documentation: https://docs.autonomi.com/developers
+- Run a Node: https://docs.autonomi.com/node
+- ANT Token Documentation: https://docs.autonomi.com/token
 - Who We Are: https://autonomi.com/who-we-are
 - Publications: https://autonomi.com/publications.md
 
 ## Source Code
 
+- WithAutonomi Organization: https://github.com/WithAutonomi
 - Developer SDK: https://github.com/WithAutonomi/ant-sdk
 - Client CLI and Library: https://github.com/WithAutonomi/ant-client
 - Node Implementation: https://github.com/WithAutonomi/ant-node
 - Self-Encryption: https://github.com/WithAutonomi/self_encryption
+- ant-keygen: https://github.com/WithAutonomi/ant-keygen
 - Indelible: https://github.com/WithAutonomi/indelible
-- ant-ui: https://github.com/WithAutonomi/ant-ui
+- Autonomi App (ant-ui, desktop app for running nodes and uploading data): https://github.com/WithAutonomi/ant-ui
 - evmlib: https://github.com/WithAutonomi/evmlib
+- saorsa-labs Organization: https://github.com/saorsa-labs
 - Core Library (saorsa-labs): https://github.com/saorsa-labs/saorsa-core
 - Post-Quantum Cryptography (saorsa-labs): https://github.com/saorsa-labs/saorsa-pqc
 - Transport (saorsa-labs): https://github.com/saorsa-labs/saorsa-transport
