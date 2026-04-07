@@ -17,7 +17,7 @@ Examples: Personal vaults, encrypted backups, secure file sharing, password mana
 - How the overall architecture would work for this use case
 - How users manage their keys across devices (generation, storage, recovery, portability)
 - Where Data Maps go and how users organize files
-- How users share files or collaborate on shared folders
+- How users share files on Autonomi, and when to use x0x for live collaboration or shared mutable state
 - How to make key management accessible to non-technical users
 
 Ask me questions about my specific needs and help me explore how I would use Autonomi for this use case.

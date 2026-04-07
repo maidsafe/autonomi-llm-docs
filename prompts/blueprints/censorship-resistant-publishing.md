@@ -5,7 +5,7 @@ I want to build publishing platforms on Autonomi where content cannot be taken d
 Publishing platforms where:
 - Content persists permanently once published
 - No single authority can remove or censor content
-- Immutable record of what was published and when
+- Published content remains immutable once stored
 - Globally accessible from anywhere
 - Can't be taken offline by server shutdowns or legal action
 
@@ -16,7 +16,7 @@ Examples: Blogs, wikis, documentation sites, journalism platforms, whistleblowin
 - Why Autonomi would be good for this versus traditional hosting or other decentralized alternatives
 - How the overall architecture would work for publishing content
 - How readers discover and access published content (addresses, indexes, domain names)
-- How to handle updates to published content (versions, pointers, history)
+- How to handle updates to published content by publishing new immutable versions
 - How site navigation and structure work without traditional servers
 - The implications of permanent, immutable publishing (responsibility, mistakes, moderation)
 
