@@ -16,7 +16,7 @@ Examples: Blogs, wikis, documentation sites, journalism platforms, whistleblowin
 - Why Autonomi would be good for this versus traditional hosting or other decentralized alternatives
 - How the overall architecture would work for publishing content
 - How readers discover and access published content (addresses, indexes, domain names)
-- How to handle updates to published content (new immutable versions, indexes, history)
+- How to handle updates to published content by publishing new immutable versions
 - How site navigation and structure work without traditional servers
 - The implications of permanent, immutable publishing (responsibility, mistakes, moderation)
 
