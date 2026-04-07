@@ -5,7 +5,7 @@ I want to build publishing platforms on Autonomi where content cannot be taken d
 Publishing platforms where:
 - Content persists permanently once published
 - No single authority can remove or censor content
-- Immutable record of what was published, with timestamps and history handled explicitly where needed
+- Published content remains immutable once stored
 - Globally accessible from anywhere
 - Can't be taken offline by server shutdowns or legal action
 

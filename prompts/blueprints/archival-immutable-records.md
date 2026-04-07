@@ -1,11 +1,11 @@
-I want to use Autonomi for tamper-proof, permanent record keeping - any scenario where data must be preserved exactly as it was, with verifiable integrity and no possibility of alteration.
+I want to use Autonomi for tamper-proof, permanent record keeping - any scenario where data must be preserved exactly as it was and remain immutable once stored.
 
 ## The Use Case
 
 Store records that must be:
 - Permanently preserved (decades or longer)
 - Tamper-proof and verifiable
-- Immutable, with version history handled explicitly where needed
+- Immutable once stored
 - Globally accessible for verification
 - Independent of any single organization's survival
 
@@ -15,7 +15,7 @@ Examples: Research data, legal documents, compliance records, audit trails, hist
 
 - Why Autonomi would be good for this versus traditional archival or other decentralized alternatives
 - How the overall architecture would work for archival and records management
-- How to verify it hasn't been tampered with, and what I would need if I also want trusted timestamps
+- How to verify that retrieved content matches what was originally stored
 - How to maintain version history and provenance as part of the application design
 - How to organize and discover records in large archives
 - How to handle access control for public vs restricted archives
